@@ -3,4 +3,11 @@
     <string name="app_name">List</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string-array name="listView">
+        <item >Aoa</item>
+        <item >how r u</item>
+        <item >hope u r fine</item>
+        <item>Takecare</item>
+        <item >Allah hafiz</item>
+    </string-array>
 </resources>
