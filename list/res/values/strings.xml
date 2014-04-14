@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">list</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="app_ListOfItems">ListView</string-array>
+    <string-array name="list_array">
+    <item >Waiting for button to press</item>
+    <item >"how are u"</item>
+    <item >"hope u r fine"</item>
+    <item >"Best of luck"</item>
+    <item >"Allah Hafiz"</item>
+    </string-array>
+
+</resources>
