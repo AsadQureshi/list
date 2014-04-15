@@ -1,70 +1,46 @@
 package com.metikulous.list;
 
 import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
-import android.os.Build;
+import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
-	EditText txtTest;
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-
-		if (savedInstanceState == null) {
-			getFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
-		}
-	}
-
-	public void btnSubmitClicked(View v) {
-		
-
-	
-		txtTest = (EditText) getViewByID(R.textInput);
-
-	
+	Button   mButton;
+	EditText mEdit;
+	ListView mList;
 	
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+	public void onCreate(Bundle savedInstanceState)
+	{
+	    super.onCreate(savedInstanceState);
+	    setContentView(R.layout.activity_main);
 
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	    mButton = (Button)findViewById(R.id.btnSubmit);
+	    mEdit   = (EditText)findViewById(R.id.textInput);
+
+	    mButton.setOnClickListener(
+	        new View.OnClickListener()
+	        {
+	            public void onClick(View view)
+	            {
+	            	EditText edit = (EditText)findViewById(R.id.textInput);
+	            	ListView tview = (ListView)findViewById(R.id.listView);
+	            	String result = edit.getText().toString();
+	            	tview.setText(result);;    
+	            }
+	            
+	        });
 	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-			return rootView;
-		}
-	}
-
 }
+
+   
+
+
+	
+	
+	

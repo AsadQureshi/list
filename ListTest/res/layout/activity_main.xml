@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="60dp"
-        android:text="Submit" />
+        android:text="Submit" 
+        android:onClick="btnSubmitClicked"/>
 
     <ListView
         android:id="@+id/listView"
