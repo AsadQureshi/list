@@ -9,10 +9,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.os.Build;
 
 public class MainActivity extends Activity {
-
+	EditText txtTest;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -23,6 +24,14 @@ public class MainActivity extends Activity {
 		}
 	}
 
+	public void btnSubmitClicked(View v) {
+		
+
+	
+		txtTest = (EditText) getViewByID(R.textInput);
+
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
