@@ -11,30 +11,37 @@
         android:id="@+id/textInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
+        android:layout_marginBottom="82dp"
+        android:ems="10"
         android:text="enter your text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
+    
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="60dp"
-        android:text="Submit" 
-        android:onClick="btnSubmitClicked"/>
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textInput"
+        android:layout_marginTop="47dp"
+        android:onClick="btnSubmitClicked"
+        android:text="Submit" />
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btnSubmit"
-        android:entries="@array/listView" />
+        android:entries="@array/listView" >
+    </ListView>
 
-   
-    
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_centerVertical="true"
+        android:text="Your entered Text" />
 
 </RelativeLayout>

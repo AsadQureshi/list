@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 	            public void onClick(View view)
 	            {
 	            	EditText edit = (EditText)findViewById(R.id.textInput);
-	            	ListView tview = (ListView)findViewById(R.id.listView);
+	            	TextView tview = (TextView)findViewById(R.id.listView);
 	            	String result = edit.getText().toString();
 	            	tview.setText(result);;    
 	            }
